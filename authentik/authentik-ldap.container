@@ -1,0 +1,17 @@
+[Unit]
+Description=Authentik LDAP Provider
+
+[Container]
+AutoUpdate=registry
+ContainerName=authentik-ldap
+Environment=AUTHENTIK_HOST=http://authentik-server:9000
+Environment=AUTHENTIK_INSECURE=true
+Image=ghcr.io/goauthentik/ldap:2025.8
+Pod=authentik.pod
+Secret=authentik-ldap-token,type=env,target=AUTHENTIK_TOKEN
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

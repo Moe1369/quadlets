@@ -1,0 +1,15 @@
+[Unit]
+Description=Flaresolverr
+
+[Container]
+ContainerName=flaresolverr
+AutoUpdate=registry
+Environment=TZ=Europe/Berlin
+Image=ghcr.io/thephaseless/byparr:latest
+Pod=manga.pod
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

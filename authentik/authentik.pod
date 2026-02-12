@@ -1,0 +1,13 @@
+[Unit]
+Description=Authentik Pod
+
+[Pod]
+PodName=authentik
+Network=authentik.network
+PublishPort=9000:9000
+PublishPort=3389:3389
+PublishPort=6636:6636
+
+
+[Install]
+WantedBy=default.target

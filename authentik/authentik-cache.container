@@ -1,0 +1,16 @@
+[Unit]
+Description=Authentik Redis Cache
+
+[Container]
+AutoUpdate=registry
+ContainerName=authentik-cache
+Exec=--save 60 1 --loglevel warning
+Image=docker.io/library/redis:alpine
+Pod=authentik.pod
+Volume=authentik-cache.volume:/data
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

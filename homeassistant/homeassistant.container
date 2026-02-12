@@ -1,0 +1,17 @@
+[Unit]
+Description=Home Assistant
+
+[Container]
+AutoUpdate=registry
+ContainerName=homeassistant
+Environment=TZ=Europe/Berlin
+GroupAdd=keep-groups
+Image=ghcr.io/home-assistant/home-assistant:stable
+Pod=homeassistant.pod
+Volume=homeassistant-config.volume:/config
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

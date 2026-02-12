@@ -1,0 +1,17 @@
+[Unit]
+Description=Jellyseerr Request Manager
+
+[Container]
+AutoUpdate=registry
+ContainerName=seerr
+Environment=TZ=Europe/Berlin
+Image=ghcr.io/seerr-team/seerr:sha-f91a26b
+Pod=media.pod
+Volume=seerr-config.volume:/app/config
+Volume=/var/home/administrator/data/arr-suite:/arr-suite:z
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

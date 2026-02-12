@@ -1,0 +1,19 @@
+[Unit]
+Description=Emby Media Server
+
+[Container]
+AddDevice=/dev/dri:/dev/dri:rw
+AutoUpdate=registry
+ContainerName=emby
+Environment=TZ=Europe/Berlin
+GroupAdd=keep-groups
+Image=lscr.io/linuxserver/emby:beta
+Pod=media.pod
+Volume=emby-config.volume:/config
+Volume=/var/home/administrator/data/arr-suite:/arr-suite:z
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,23 @@
+[Unit]
+Description=Authentik Worker
+
+[Container]
+ContainerName=authentik-worker
+AutoUpdate=registry
+Image=ghcr.io/goauthentik/server:2025.8
+Pod=authentik.pod
+Exec=worker
+Volume=authentik-certs.volume:/certs
+Volume=authentik-media.volume:/media
+Volume=authentik-templates.volume:/templates
+Environment=AUTHENTIK_REDIS__HOST=localhost
+Environment=AUTHENTIK_POSTGRESQL__HOST=localhost
+Environment=AUTHENTIK_POSTGRESQL__USER=authentik
+Environment=AUTHENTIK_POSTGRESQL__NAME=authentik
+Secret=authentik-database-password,type=env,target=AUTHENTIK_POSTGRESQL__PASSWORD
+Secret=authentik-secret-key,type=env,target=AUTHENTIK_SECRET_KEY
+
+[Service]
+Restart=always
+[Install]
+WantedBy=default.target

@@ -1,0 +1,17 @@
+[Unit]
+Description=Home Assistant
+
+[Container]
+AutoUpdate=registry
+ContainerName=musicassistant
+Environment=TZ=Europe/Berlin
+GroupAdd=keep-groups
+Image=ghcr.io/music-assistant/server:latest
+Pod=homeassistant.pod
+Volume=musicassistant-data.volume:/data
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,13 @@
+[Unit]
+Description=Manga Pod
+
+[Pod]
+PodName=manga
+Network=manga.network
+PublishPort=25600:25600
+PublishPort=8191:8191
+PublishPort=4567:4567
+
+[Install]
+WantedBy=default.target
+

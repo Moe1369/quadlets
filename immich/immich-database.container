@@ -1,0 +1,20 @@
+[Unit]
+Description=Immich Database
+
+[Container]
+ContainerName=immich-database
+AutoUpdate=registry
+Environment=TZ=Europe/Berlin
+Environment=POSTGRES_INITDB_ARGS='--data-checksums'
+Environment=POSTGRES_DB=immich
+Environment=POSTGRES_USER=immich
+Secret=immich-database-password,type=env,target=POSTGRES_PASSWORD
+Image=ghcr.io/immich-app/postgres:14-vectorchord0.3.0-pgvectors0.2.0
+Pod=immich.pod
+Volume=immich-database:/var/lib/postgresql/data
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

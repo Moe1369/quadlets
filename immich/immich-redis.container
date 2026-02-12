@@ -1,0 +1,15 @@
+[Unit]
+Description=Immich Redis
+
+[Container]
+ContainerName=immich-redis
+AutoUpdate=registry
+Environment=TZ=Europe/Berlin
+Image=docker.io/valkey/valkey:8-bookworm
+Pod=immich.pod
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

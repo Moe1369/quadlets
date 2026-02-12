@@ -1,0 +1,19 @@
+[Unit]
+Description=Sabnzbd Downloader
+
+[Container]
+AutoUpdate=registry
+ContainerName=sabnzbd
+Environment=TZ=Europe/Berlin
+Environment=PUID=0
+Environment=PGID=0
+Image=lscr.io/linuxserver/sabnzbd:latest
+Pod=media.pod
+Volume=sabnzbd-config.volume:/config
+Volume=/var/home/administrator/data/arr-suite:/arr-suite:z
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,18 @@
+[Unit]
+Description=Mosquitto MQTT Broker
+
+[Container]
+AutoUpdate=registry
+ContainerName=homeassistant-mosquitto
+Environment=TZ=Europe/Berlin
+Image=docker.io/eclipse-mosquitto:latest
+Pod=homeassistant.pod
+Volume=homeassistant-mosquitto-data.volume:/mosquitto/data
+Volume=homeassistant-mosquitto-config.volume:/mosquitto/config
+Volume=homeassistant-mosquitto-log.volume:/mosquitto/log
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

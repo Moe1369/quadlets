@@ -1,0 +1,17 @@
+[Unit]
+Description=Gitea
+
+[Container]
+AutoUpdate=registry
+ContainerName=gitea
+Environment=TZ=Europe/Berlin
+Image=docker.gitea.com/gitea:1.25.4-rootless
+Pod=gitea.pod
+Volume=gitea-config.volume:/var/lib/gitea
+Volume=gitea-data.volume:/etc/gitea
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

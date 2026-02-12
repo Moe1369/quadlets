@@ -1,0 +1,18 @@
+[Unit]
+Description=Authentik Database
+
+[Container]
+AutoUpdate=registry
+ContainerName=authentik-database
+Environment=POSTGRES_DB=authentik
+Environment=POSTGRES_USER=authentik
+Image=docker.io/library/postgres:16-alpine
+Pod=authentik.pod
+Secret=authentik-database-password,type=env,target=POSTGRES_PASSWORD
+Volume=authentik-database.volume:/var/lib/postgresql/data
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

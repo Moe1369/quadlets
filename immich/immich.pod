@@ -1,0 +1,10 @@
+[Unit]
+Description=Immich Pod
+
+[Pod]
+PodName=immich
+Network=immich.network
+PublishPort=8129:8080
+
+[Install]
+WantedBy=default.target

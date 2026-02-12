@@ -1,0 +1,19 @@
+[Unit]
+Description=Bazarr Subtitle Downloader
+
+[Container]
+AutoUpdate=registry
+ContainerName=bazarr
+Environment=TZ=Europe/Berlin
+Environment=PUID=0
+Environment=PGID=0
+Image=lscr.io/linuxserver/bazarr:latest
+Pod=media.pod
+Volume=bazarr-config.volume:/config
+Volume=/var/home/administrator/data/arr-suite:/arr-suite:z
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

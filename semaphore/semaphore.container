@@ -12,6 +12,8 @@ Secret=semaphore-password,type=env,target=SEMAPHORE_ADMIN_PASSWORD
 Environment=SEMAPHORE_ADMIN_NAME=Administrator
 Pod=semaphore.pod
 Volume=semaphore-config.volume:/etc/semaphore
+Volume=semaphore-data.volume:/var/lib/semaphore
+Volume=semaphore-temp.volume:/tmp/semaphore
 
 [Service]
 Restart=always

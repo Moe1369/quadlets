@@ -6,7 +6,6 @@ AutoUpdate=registry
 ContainerName=semaphore
 Environment=TZ=Europe/Berlin
 Image=docker.io/semaphoreui/semaphore:latest
-Environment=SEMAPHORE_WEB_ROOT=/
 Environment=SEMAPHORE_DB_DIALECT=bolt
 Environment=SEMAPHORE_ADMIN=admin
 Secret=semaphore-password,type=env,target=SEMAPHORE_ADMIN_PASSWORD

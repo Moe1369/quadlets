@@ -21,6 +21,8 @@ Image=ghcr.io/imagegenius/immich:openvino
 Pod=immich.pod
 Volume=immich-data:/data
 Volume=immich-photos:/photos
+Volume=immich-libraries:/libraries
+Volume=immich-config:/config
 
 [Service]
 Restart=always

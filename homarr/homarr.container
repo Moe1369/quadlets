@@ -1,0 +1,18 @@
+[Unit]
+Description=Homarr Dashboard
+
+[Container]
+AutoUpdate=registry
+ContainerName=homarr
+Environment=TZ=Europe/Berlin
+Image=ghcr.io/ajnart/homarr:latest
+Pod=homarr.pod
+Volume=homarr-config:/app/data/configs
+Volume=homarr-icons:/app/public/icons
+Volume=homarr-data:/data
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

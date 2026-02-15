@@ -1,0 +1,16 @@
+[Unit]
+Description=Homepage Dashboard
+
+[Container]
+AutoUpdate=registry
+ContainerName=homepage
+Environment=TZ=Europe/Berlin
+Image=ghcr.io/gethomepage/homepage:latest
+Pod=homepage.pod
+Volume=homepage-config:/app/config
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

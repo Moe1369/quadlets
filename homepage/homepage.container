@@ -5,6 +5,7 @@ Description=Homepage Dashboard
 AutoUpdate=registry
 ContainerName=homepage
 Environment=TZ=Europe/Berlin
+Environment=HOMEPAGE_ALLOWED_HOSTS=10.0.10.2:3002,homepage.chrayed.de
 Image=ghcr.io/gethomepage/homepage:latest
 Pod=homepage.pod
 Volume=homepage-config:/app/config

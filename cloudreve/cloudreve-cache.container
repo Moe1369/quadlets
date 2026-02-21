@@ -3,7 +3,7 @@ Description=Cloudreve Cache Server
 
 [Container]
 AutoUpdate=registry
-ContainerName=cloudreve-server
+ContainerName=cloudreve-cache
 Environment=TZ=Europe/Berlin
 Image=docker.io/library/redis:latest
 Pod=cloudreve.pod

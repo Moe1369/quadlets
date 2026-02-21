@@ -1,0 +1,19 @@
+[Unit]
+Description=Cloudreve Database Server
+
+[Container]
+AutoUpdate=registry
+ContainerName=cloudreve-database
+Environment=TZ=Europe/Berlin
+Environment=POSTGRES_USER=cloudreve
+Environment=POSTGRES_DB=cloudreve
+Environment=POSTGRES_HOST_AUTH_METHOD=trust
+Image=docker.io/library/postgres:17
+Pod=cloudreve.pod
+Volume=cloudreve-database.volume:/var/lib/postgresql/data
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

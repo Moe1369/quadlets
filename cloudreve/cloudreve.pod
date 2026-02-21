@@ -1,0 +1,10 @@
+[Unit]
+Description=Cloudreve Pod
+[Pod]
+PodName=cloudreve
+Network=cloudreve.network
+PublishPort=5212:5212
+PublishPort=6888:6888
+
+[Install]
+WantedBy=default.target

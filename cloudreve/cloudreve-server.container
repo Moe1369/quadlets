@@ -1,0 +1,22 @@
+[Unit]
+Description=Cloudreve Application Server
+
+[Container]
+AutoUpdate=registry
+ContainerName=cloudreve-server
+Environment=TZ=Europe/Berlin
+Environment=CR_CONF_Database.Type=postgres
+Environment=CR_CONF_Database.Host=postgresql
+Environment=CR_CONF_Database.User=cloudreve
+Environment=CR_CONF_Database.Name=cloudreve
+Environment=CR_CONF_Database.Port=5432
+Environment=CR_CONF_Redis.Server=cloudreve-redis:6379
+Image=docker.io/cloudreve/cloudreve:latest
+Pod=cloudreve.pod
+Volume=cloudreve-data.volume:/cloudreve/data
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

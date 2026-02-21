@@ -1,0 +1,16 @@
+[Unit]
+Description=Cloudreve Cache Server
+
+[Container]
+AutoUpdate=registry
+ContainerName=cloudreve-server
+Environment=TZ=Europe/Berlin
+Image=docker.io/library/redis:latest
+Pod=cloudreve.pod
+Volume=cloudreve-cache.volume:/data
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

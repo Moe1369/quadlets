@@ -1,0 +1,18 @@
+[Unit]
+Description=Open WebUI
+
+[Container]
+AutoUpdate=registry
+ContainerName=openwebui
+Environment=OLLAMA_BASE_URL=http://10.0.20.2:11434
+Environment=TZ=Europe/Berlin
+GroupAdd=keep-groups
+Image=ghcr.io/open-webui/open-webui:main
+Volume=openwebui-data.volume:/app/backend/data
+Pod=homeassistant.pod
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

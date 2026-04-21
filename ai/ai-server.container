@@ -1,0 +1,19 @@
+[Unit]
+Description=home-mind Server
+After=ai-shodh.service
+
+[Container]
+AutoUpdate=registry
+ContainerName=ai-server
+EnvironmentFile=%h/.config/containers/ai.env
+Environment=PORT=3100
+Environment=SHODH_URL=http://localhost:3030
+Image=ghcr.io/hoornet/home-mind-server:latest
+Pod=ai.pod
+Volume=ai-conversation-data.volume:/data
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

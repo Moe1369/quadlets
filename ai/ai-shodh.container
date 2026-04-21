@@ -1,0 +1,19 @@
+[Unit]
+Description=home-mind Shodh
+After=ai-shodh-data.service
+
+[Container]
+AutoUpdate=registry
+ContainerName=ai-shodh
+EnvironmentFile=%h/.config/containers/ai.env
+Environment=SHODH_HOST=0.0.0.0
+Environment=SHODH_PORT=3030
+Image=ghcr.io/hoornet/home-mind-shodh:latest
+Pod=ai.pod
+Volume=ai-shodh-data.volume:/data
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

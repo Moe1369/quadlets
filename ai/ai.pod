@@ -1,0 +1,11 @@
+[Unit]
+Description=AI Pod
+
+[Pod]
+PodName=ai
+Network=ai.network
+PublishPort=3030:3030
+PublishPort=3100:3100
+
+[Install]
+WantedBy=default.target

@@ -8,7 +8,7 @@ ContainerName=ai-shodh
 EnvironmentFile=%h/.config/containers/ai.env
 Environment=SHODH_HOST=0.0.0.0
 Environment=SHODH_PORT=3030
-Image=ghcr.io/hoornet/home-mind-shodh:latest
+Image=localhost/home-mind-shodh:latest
 Pod=ai.pod
 Volume=ai-shodh-data.volume:/data
 

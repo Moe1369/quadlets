@@ -8,7 +8,7 @@ ContainerName=ai-server
 EnvironmentFile=%h/.config/containers/ai.env
 Environment=PORT=3100
 Environment=SHODH_URL=http://localhost:3030
-Image=ghcr.io/hoornet/home-mind-server:latest
+Image=localhost/home-mind-server:latest
 Pod=ai.pod
 Volume=ai-conversation-data.volume:/data
 

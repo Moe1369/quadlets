@@ -1,0 +1,17 @@
+[Unit]
+Description=Home Assistant MCP Server
+
+[Container]
+AutoUpdate=registry
+ContainerName=ha-mcp
+Environment=HOMEASSISTANT_URL=http://localhost:8123
+Secret=ha_token,type=env,target=HOMEASSISTANT_TOKEN
+Image=ghcr.io/homeassistant-ai/ha-mcp:latest
+PublishPort=8086:8086
+Exec=ha-mcp-web
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

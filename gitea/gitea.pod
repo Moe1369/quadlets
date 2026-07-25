@@ -1,9 +1,0 @@
-[Unit]
-Description=Gitea Pod
-[Pod]
-PodName=gitea
-Network=gitea.network
-PublishPort=3001:3000
-PublishPort=2222:2222
-[Install]
-WantedBy=default.target

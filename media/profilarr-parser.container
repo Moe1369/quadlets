@@ -3,7 +3,7 @@ Description=Profilarr
 
 [Container]
 AutoUpdate=registry
-ContainerName=profilarr
+ContainerName=profilarr-parser
 Environment=TZ=Europe/Berlin
 Image=ghcr.io/dictionarry-hub/profilarr-parser:latest
 Pod=media.pod

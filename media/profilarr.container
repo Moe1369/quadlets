@@ -9,6 +9,7 @@ Environment=PARSER_HOST=localhost
 Environment=PARSER_PORT=5000
 Image=ghcr.io/dictionarry-hub/profilarr:latest
 Pod=media.pod
+Volume=profilarr-config:/config
 
 [Service]
 Restart=always

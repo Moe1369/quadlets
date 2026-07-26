@@ -5,6 +5,7 @@ Description=Profilarr
 AutoUpdate=registry
 ContainerName=profilarr
 Environment=TZ=Europe/Berlin
+Environment=ORIGIN=https://profilarr.chrayed.de
 Environment=PARSER_HOST=media
 Environment=PARSER_PORT=5000
 Image=ghcr.io/dictionarry-hub/profilarr:latest

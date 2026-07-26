@@ -5,7 +5,6 @@ Description=Media Pod
 PodName=media
 Network=media.network
 PublishPort=6767:6767
-PublishPort=6595:6595
 PublishPort=8096:8096
 PublishPort=5055:5055
 PublishPort=7878:7878
@@ -14,8 +13,6 @@ PublishPort=8989:8989
 PublishPort=8266:8266
 PublishPort=8265:8265
 PublishPort=6868:6868
-PublishPort=8409:8409
-PublishPort=8789:8789
 
 [Install]
 WantedBy=default.target

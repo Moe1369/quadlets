@@ -6,7 +6,7 @@ AutoUpdate=registry
 ContainerName=homebridge
 Environment=TZ=Europe/Berlin
 Image=docker.io/homebridge/homebridge:latest
-Pod=homebridge.pod
+Pod=home.pod
 Volume=homebridge-config.volume:/homebridge
 LogDriver=json-file
 PodmanArgs=--log-opt max-size=10mb --log-opt max-file=1

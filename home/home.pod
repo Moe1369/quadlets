@@ -2,7 +2,7 @@
 Description=Homebridge Pod
 
 [Pod]
-PodName=homebridge
+PodName=home
 Network=host
 
 [Install]

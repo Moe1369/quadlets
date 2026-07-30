@@ -1,0 +1,18 @@
+[Unit]
+Description=Homebridge
+
+[Container]
+AutoUpdate=registry
+ContainerName=homebridge
+Environment=TZ=Europe/Berlin
+Image=docker.io/homebridge/homebridge:latest
+Pod=homebridge.pod
+Volume=homebridge-config.volume:/homebridge
+LogDriver=json-file
+PodmanArgs=--log-opt max-size=10mb --log-opt max-file=1
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

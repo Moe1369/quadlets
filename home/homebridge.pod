@@ -1,0 +1,9 @@
+[Unit]
+Description=Homebridge Pod
+
+[Pod]
+PodName=homebridge
+Network=host
+
+[Install]
+WantedBy=default.target

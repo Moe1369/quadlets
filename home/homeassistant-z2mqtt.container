@@ -8,7 +8,7 @@ ContainerName=homeassistant-z2mqtt
 Environment=TZ=Europe/Berlin
 GroupAdd=keep-groups
 Image=ghcr.io/koenkk/zigbee2mqtt
-Pod=homeassistant.pod
+Pod=home.pod
 Volume=/run/udev:/run/udev:ro
 Volume=homeassistant-z2mqtt-data:/app/data
 

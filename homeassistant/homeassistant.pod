@@ -1,9 +1,0 @@
-[Unit]
-Description=Home Assistant Pod
-
-[Pod]
-PodName=homeassistant
-Network=host
-
-[Install]
-WantedBy=default.target

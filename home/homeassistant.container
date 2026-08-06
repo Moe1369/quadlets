@@ -1,0 +1,18 @@
+[Unit]
+Description=Home Assistant
+
+[Container]
+AutoUpdate=registry
+AddDevice=/dev/serial/by-id/usb-ITead_Sonoff_Zigbee_3.0_USB_Dongle_Plus_489bdfc0246bef1191079fadc169b110-if00-port0:/dev/ttyUSB0
+ContainerName=homeassistant
+Environment=TZ=Europe/Berlin
+GroupAdd=keep-groups
+Image=ghcr.io/home-assistant/home-assistant:stable
+Pod=home.pod
+Volume=homeassistant-config.volume:/config
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

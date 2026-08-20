@@ -1,0 +1,20 @@
+[Unit]
+Description=Jellyfin Media Server
+
+[Container]
+AddDevice=/dev/dri:/dev/dri:rw
+AutoUpdate=registry
+ContainerName=jellyfin
+Environment=TZ=Europe/Berlin
+Environment=
+GroupAdd=keep-groups
+Image=ghcr.io/jellyfin/jellyfin
+Pod=media.pod
+Volume=jellyfin-config.volume:/config
+Volume=/var/home/administrator/data/arr-suite:/arr-suite:z
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

@@ -7,7 +7,7 @@ AutoUpdate=registry
 ContainerName=emby
 Environment=TZ=Europe/Berlin
 GroupAdd=keep-groups
-Image=lscr.io/linuxserver/emby:stable
+Image=lscr.io/linuxserver/emby:latest
 Pod=media.pod
 Volume=emby-config.volume:/config
 Volume=/var/home/administrator/data/arr-suite:/arr-suite:z

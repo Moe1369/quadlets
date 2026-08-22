@@ -10,6 +10,7 @@ PublishPort=8097:8097
 PublishPort=5055:5055
 PublishPort=7878:7878
 PublishPort=8088:8080
+PublishPort=8089:80
 PublishPort=8989:8989
 PublishPort=8266:8266
 PublishPort=8265:8265

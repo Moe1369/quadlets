@@ -4,13 +4,10 @@ Description=Jellyfin Media Server
 [Container]
 AddDevice=/dev/dri:/dev/dri:rw
 AutoUpdate=registry
-ContainerName=jellyfin
+ContainerName=jellyfin-vue
 Environment=TZ=Europe/Berlin
-GroupAdd=keep-groups
-Image=ghcr.io/jellyfin/jellyfin
+Image=ghcr.io/jellyfin/jellyfin-vue:unstable
 Pod=media.pod
-Volume=jellyfin-config.volume:/config
-Volume=/var/home/administrator/data/arr-suite:/arr-suite:z
 
 [Service]
 Restart=always

@@ -2,7 +2,6 @@
 Description=Jellyfin Media Server
 
 [Container]
-AddDevice=/dev/dri:/dev/dri:rw
 AutoUpdate=registry
 ContainerName=jellyfin-vue
 Environment=TZ=Europe/Berlin

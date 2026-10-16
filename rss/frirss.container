@@ -6,7 +6,7 @@ After=freshrss.service
 AutoUpdate=registry
 ContainerName=frirss
 Environment=TZ=Europe/Berlin
-Environment=FRIRSS_BASE_URL=https://frirss.chrayed.de
+Environment=FRIRSS_BASE_URL=https://rss.chrayed.de
 Environment=PROXY_INTERNAL_HOSTS=localhost,127.0.0.1
 Image=ghcr.io/fripix/frirss:latest
 Pod=rss.pod

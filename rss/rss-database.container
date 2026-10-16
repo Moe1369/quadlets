@@ -1,0 +1,18 @@
+[Unit]
+Description=RSS Database
+
+[Container]
+AutoUpdate=registry
+ContainerName=rss-database
+Environment=POSTGRES_DB=freshrss
+Environment=POSTGRES_USER=freshrss
+Image=docker.io/library/postgres:16-alpine
+Pod=rss.pod
+Secret=rss-database-password,type=env,target=POSTGRES_PASSWORD
+Volume=rss-database.volume:/var/lib/postgresql/data
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

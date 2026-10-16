@@ -1,0 +1,11 @@
+[Unit]
+Description=RSS Pod
+ 
+[Pod]
+PodName=rss
+Network=rss.network
+PublishPort=8091:80
+ 
+[Install]
+WantedBy=default.target
+ 

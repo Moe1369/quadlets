@@ -1,0 +1,19 @@
+[Unit]
+Description=FriRSS Frontend
+After=freshrss.service
+
+[Container]
+AutoUpdate=registry
+ContainerName=frirss
+Environment=TZ=Europe/Berlin
+Environment=FRIRSS_BASE_URL=https://frirss.chrayed.de
+Environment=PROXY_INTERNAL_HOSTS=localhost,127.0.0.1
+Image=ghcr.io/fripix/frirss:latest
+Pod=rss.pod
+Volume=frirss-data.volume:/app/data
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

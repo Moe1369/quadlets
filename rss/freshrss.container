@@ -8,6 +8,7 @@ AutoUpdate=registry
 ContainerName=freshrss
 Environment=TZ=Europe/Berlin
 Environment=CRON_MIN=1,31
+Environment=LISTEN=0.0.0.0:8080
 Image=docker.io/freshrss/freshrss:latest
 Pod=rss.pod
 Volume=freshrss-data.volume:/var/www/FreshRSS/data

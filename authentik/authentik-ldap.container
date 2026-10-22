@@ -6,7 +6,7 @@ AutoUpdate=registry
 ContainerName=authentik-ldap
 Environment=AUTHENTIK_HOST=http://authentik-server:9000
 Environment=AUTHENTIK_INSECURE=true
-Image=ghcr.io/goauthentik/ldap:2026.8
+Image=ghcr.io/goauthentik/ldap:2026.5
 Pod=authentik.pod
 Secret=authentik-ldap-token,type=env,target=AUTHENTIK_TOKEN
 Secret=authentik-database-password,type=env,target=AUTHENTIK_POSTGRESQL__PASSWORD

@@ -7,6 +7,7 @@ AutoUpdate=registry
 Image=ghcr.io/goauthentik/server:2026.5
 Pod=authentik.pod
 Exec=worker
+User=root
 Volume=authentik-certs.volume:/certs
 Volume=authentik-data.volume:/data
 Volume=authentik-templates.volume:/templates

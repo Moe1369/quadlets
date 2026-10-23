@@ -17,8 +17,9 @@ Environment=AUTHENTIK_EMAIL__PORT=465
 Environment=AUTHENTIK_EMAIL__USERNAME=mohamed@chrayed.de
 Environment=AUTHENTIK_EMAIL__USE_TLS=true
 Environment=AUTHENTIK_EMAIL__FROM=mohamed@chrayed.de
+Environment=AUTHENTIK_LISTEN__TRUSTED_PROXY_CIDRS=10.0.10.0/24,10.89.0.0/16,127.0.0.0/8
 Exec=server
-Image=ghcr.io/goauthentik/server:2026.5
+Image=ghcr.io/goauthentik/server:2026.8.5
 Pod=authentik.pod
 Secret=authentik-database-password,type=env,target=AUTHENTIK_POSTGRESQL__PASSWORD
 Secret=authentik-database-password,type=env,target=POSTGRES_PASSWORD

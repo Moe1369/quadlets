@@ -10,6 +10,7 @@ GroupAdd=keep-groups
 Image=ghcr.io/jellyfin/jellyfin
 Pod=media.pod
 Volume=jellyfin-config.volume:/config
+Volume=jellyfin-cache:/cache
 Volume=/var/home/administrator/data/arr-suite:/arr-suite:z
 
 [Service]
